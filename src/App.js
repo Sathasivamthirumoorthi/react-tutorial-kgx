@@ -1,6 +1,9 @@
-import Header from "./Header";
+import Header from "./components/Header";
 import {useState} from "react"
 import { useEffect } from "react";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
+import UserList from "./components/UserList";
 
 const userDetails = [
   {
@@ -84,12 +87,17 @@ function App(){
         ))
 
       } */}
-
+{/* 
       <button onClick={handleClick} >Click me</button>
 
-      <h1>{count}</h1>
+      <h1>{count}</h1> */}
 
+      <Header/>
+      <Body name = "elon" description="This snippet is based on the counter example from the previous page, but we added a new feature to it: we set the document title to a custom message including the number of clicks."/>
+      <UserList  user={userDetails}/> 
+      <Footer/>
     </div>
+
   )
 }
 
